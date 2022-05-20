@@ -1,0 +1,83 @@
+/**{
+    margin: 0px;
+    padding: 0px;
+}*/
+header {
+    border: solid red 2px;
+    width: 40vw;
+    margin-bottom: 20px;
+}
+
+footer {
+    border: dashed pink 2px;
+}
+#parent {
+    width: 400px;
+    height: 400px;
+    background-color: cornflowerblue;
+    margin-bottom: 15px;
+}
+#child1 {
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+    transition: transform 1s cubic-bezier(0.81, 0.28, 0.04, 0.07);
+}
+#parent:hover #child1 {
+    transform: translateX(100%) rotate(45deg) translateY(100%);
+}
+#child2 {
+    width: 100px;
+    height: 100px;
+    background-color: limegreen;
+}
+#child2 {
+    animation: child2 10s infinite ease-in alternate;
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+}
+#parent:hover #child2 {
+animation-play-state: paused;
+}
+
+@keyframes child2 {
+    25% {
+        transform: translateX(0) translateY(100%);
+    }
+    50% {
+        transform: translateX(100%) translateY(100%)
+    }
+    75% {
+        transform: translateX(100%) translateY(0%);
+    }
+    100% {
+        transform: translateX(0%) translateY(0%);
+    }
+}
+aside {
+    float: left;
+    border: solid black 1px;
+    margin: 0 0 15px 0;
+}
+
+section {
+margin-left: 10px;
+border: dotted cyan 2px;
+width: 40vw;
+
+}
+
+article {
+    margin: 10px 0 10px 0;
+    animation: articles 10s infinite;
+    width: 20vw;
+    clear:both;
+}
+
+@keyframes articles {
+    0% { border: ridge khaki 1px;}
+    25% {border: dashed pink 2px;}
+    50% {border: double greenyellow 3px;}
+    75% {border: groove cyan 4px;}
+    100% {border: solid violet 5px;}
+
+}
